@@ -1,0 +1,46 @@
+# +--------------------------------+ #
+# | AdvancedRename by FlareReturns | #
+# +--------------------------------+ #
+
+# If you need help, look at our wiki at our Github Page:
+# https://github.com/FlareReturns/AdvancedReaname/wiki
+# or send me a pm at spigot! 
+
+# Please DONT leave a bad rating because the plugin has bugs or so, please contact me on github or on spigot with a pm!
+
+# Should be the Debug Mode enabled?
+Debug: false
+
+# Should be Metrics enabled?
+Metrics: true
+
+# --------
+# Custom Messages
+# --------
+
+# Here you can edit all messages. You can use placeholders with $<placeholdername> and color codes with &<colorcode>
+
+# You can use no placeholders in this message.
+Prefix: '&9AdvancedRename> '
+
+# You can use the $type and the $name placeholders.
+SuccessfullyRenamed: '&7Successfully renamed the &e$type to &r$name&7.'
+
+# You can use the $type and the $lines placeholders.
+SuccessfullyRelored: '&7Successfully relored the &e$type &7in &e$lines &7Lines.'
+
+# You can use the $type placeholder.
+SuccessfullyGlowed: '&7Your &e$type &7has now a glow effect.'
+
+# You can use the $type placeholder.
+SuccessfullyRemoved: '&7Your &e$type &7has no longer a glow effect.'
+
+# You can use the $permission placeholder.
+NoPermission: '&7You need the &e$permission &7Permission for this command.'
+
+# You can use no placeholders in this message.
+NoItem: '&7You must hold a &eItem &7in your hand.'
+
+# You can use no placeholders in this message.
+NotPlayer: '&cYou must be a player to use this command.'
+
