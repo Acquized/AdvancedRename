@@ -1,2 +1,2 @@
-# AdvancedReaname
+# AdvancedRename
 A advanced rename plugin
