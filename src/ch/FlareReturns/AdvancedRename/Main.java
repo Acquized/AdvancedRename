@@ -14,13 +14,12 @@ import ch.FlareReturns.AdvancedRename.Listeners.Join;
 
 public class Main extends JavaPlugin {
 	
-	public static String pr = "ง1 ง3AR ง8ป ง7";
+	public static String pr = "ยง1 ยง3AR ยง8ยป ยง7";
 	private static Main instance;
 	
 	@Override
 	public void onEnable() {
 		instance = this;
-		registerListeners();
 		registerCommands();
 		Bukkit.getConsoleSender().sendMessage("[AdvancedRename] AdvancedRename v" + getDescription().getVersion() + " enabled.");
 		try {
@@ -38,10 +37,6 @@ public class Main extends JavaPlugin {
 		Bukkit.getConsoleSender().sendMessage("[AdvancedRename] AdvancedRename v" + getDescription().getVersion() + " disabled.");
 	}
 	
-	private void registerListeners() {
-		PluginManager pm = Bukkit.getPluginManager();
-		pm.registerEvents(new Join(), this);
-	}
 	
 	private void registerCommands() {
 		Bukkit.getPluginCommand("rename").setExecutor(new Rename());
