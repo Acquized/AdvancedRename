@@ -6,7 +6,9 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -28,6 +30,23 @@ public class ItemModCommand implements CommandExecutor{
             if(args.length==0){
                 p.sendMessage(color("&2Your current item is: "+itemStack.getType().toString()+"\n" +
                         "&2For more commands type /itemmod help"));
+            }else if(args.length ==1){
+                if(args[0].equalsIgnoreCase("help")){
+                }else if(args[0].equalsIgnoreCase("glow")){
+                    itemMeta.addEnchant(Enchantment.LUCK, 1, false);
+                    itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    itemStack.setItemMeta(itemMeta);
+                }else if(args[0].equalsIgnoreCase("deglow")){
+                    itemMeta.removeEnchant(Enchantment.LUCK);
+                    itemMeta.removeItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    itemStack.setItemMeta(itemMeta);
+                }else if(args[0].equalsIgnoreCase("lore")){
+                    p.sendMessage(color(""));
+                }else if(args[0].equalsIgnoreCase("displayname")){
+                    p.sendMessage(color(""));
+                }
+            }else if(args.length>=2){
+
             }
         }else{
             sender.sendMessage(color("&4You must be a player to run this command"));
@@ -35,7 +54,8 @@ public class ItemModCommand implements CommandExecutor{
         }
         return false;
     }
-    public String color(String s){
+    private String color(String s){
         return ChatColor.translateAlternateColorCodes('&', s);
     }
+
 }
