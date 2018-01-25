@@ -1,0 +1,13 @@
+name: KingRename
+version: 1.0.0
+author: KingTux
+main: me.kingtux.kingrename.KingRenameMain
+commands:
+  glow:
+    aliases: [gloweffect]
+  relore:
+    aliases: [rl]
+  rename:
+    aliases: [rn]
+  resetglow:
+    aliases: [rg, removeglow]
