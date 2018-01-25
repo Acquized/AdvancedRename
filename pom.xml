@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project.build.sourceEncoding>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>KingRename</artifactId>
+<description>A renameing plugin</description>
+<version>1.0</version>
+<packaging>jar</packaging>
+<properties>
+<!--   Author and MainClass are used in plugin.yml  -->
+<author>KingTux</author>
+<mainClass>me.kingtux.kingrename.KingRenameMain</mainClass>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+<dependencies>
+<dependency>
+    <groupId>org.spigotmc</groupId>
+    <artifactId>spigot-api</artifactId>
+    <version>1.12.2-R0.1-SNAPSHOT</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.bukkit</groupId>
+    <artifactId>bukkit</artifactId>
+    <version>1.12.2-R0.1-SNAPSHOT</version>
+    <scope>provided</scope>
+</dependency>
+
+</dependencies>
+<repositories>
+<repository>
+    <id>spigot-repo</id>
+    <url>
+        https://hub.spigotmc.org/nexus/content/groups/public/
+    </url>
+</repository>
+
+</repositories>
+<build>
+<sourceDirectory>src/main/java</sourceDirectory>
+<defaultGoal>clean install</defaultGoal>
+<resources>
+    <resource>
+        <directory>src/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+            <include>plugin.yml</include>
+            <include>*.yml</include>
+        </includes>
+    </resource>
+    <resource>
+        <directory>src/resources</directory>
+        <filtering>false</filtering>
+        <excludes>
+            <exclude>**/*.java</exclude>
+            <exclude>plugin.yml</exclude>
+        </excludes>
+    </resource>
+</resources>
+<plugins>
+    <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+            <source>1.7</source>
+            <target>1.7</target>
+        </configuration>
+    </plugin>
+</plugins>
+</build>
+</project.build.sourceEncoding>

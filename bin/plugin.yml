@@ -1,7 +1,7 @@
 name: AdvancedRename
 version: 1.0.0
 author: FlareReturns
-main: ch.FlareReturns.AdvancedRename.Main
+main: ch.FlareReturns.AdvancedRename.KingRenameMain
 commands:
   glow:
     aliases: [gloweffect]
